@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Database Access Application</h1>
+    <p class="lead">Application to search and manage the SQL Database.</p>
+    @*<p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Load Database Tables (Editable)</h2>
+        <p>
+            <ul><li>@Html.ActionLink("'Pet Group' Database", "Index", "PET_GROUP")</li></ul>
+            <ul><li>@Html.ActionLink("'Pet Info' Database", "Index", "PET_INFO")</li></ul>
+            <ul><li>@Html.ActionLink("'Pet Record' Database", "Index", "PET_RECORD")</li></ul>
+            <ul><li>@Html.ActionLink("'Pet Size' Database", "Index", "PET_SIZE")</li></ul>
+            <ul><li>@Html.ActionLink("'Record Packing' Database", "Index", "RECORD_PACKING")</li></ul>
+        </p>
+        @*<p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>*@
+    </div>
+    <div class="col-md-4">
+        <h2>Load Fish Database View (Display Only)</h2>
+        <p>PUT VIEW LINK HERE WHEN AVAILABLE</p>
+        @*<p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>*@
+    </div>
+    @*<div class="col-md-4">
+            <h2>Web Hosting</h2>
+            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        </div>*@
+</div>
