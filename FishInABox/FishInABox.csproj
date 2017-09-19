@@ -194,6 +194,13 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MARINE_CLASSController.cs" />
+    <Compile Include="Controllers\MARINE_CLIMATEController.cs" />
+    <Compile Include="Controllers\MARINE_FAMILYController.cs" />
+    <Compile Include="Controllers\MARINE_SPECIESController.cs" />
+    <Compile Include="Controllers\MARINE_TYPEController.cs" />
+    <Compile Include="Controllers\MPI_SRFIROController.cs" />
+    <Compile Include="Controllers\MPI_SRFIRO_DETAILController.cs" />
     <Compile Include="Controllers\PET_GROUPController.cs" />
     <Compile Include="Controllers\PET_INFOController.cs" />
     <Compile Include="Controllers\PET_RECORDController.cs" />
@@ -203,6 +210,21 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AspNetRole.cs">
+      <DependentUpon>Logins.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUser.cs">
+      <DependentUpon>Logins.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserClaim.cs">
+      <DependentUpon>Logins.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserLogin.cs">
+      <DependentUpon>Logins.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\C__MigrationHistory.cs">
+      <DependentUpon>Logins.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\FishDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -237,7 +259,58 @@
       <DependentUpon>FishWithTank.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\LiveDatabase.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LiveDatabase.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LiveDatabase.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LiveDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LiveDatabase.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LiveDatabase.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Logins.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Logins.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Logins.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Logins.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Logins.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Logins.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MARINE_CLASS.cs">
+      <DependentUpon>LiveDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MARINE_CLIMATE.cs">
+      <DependentUpon>LiveDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MARINE_FAMILY.cs">
+      <DependentUpon>LiveDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MARINE_SPECIES.cs">
+      <DependentUpon>LiveDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MARINE_TYPE.cs">
+      <DependentUpon>LiveDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MPI_SRFIRO.cs">
+      <DependentUpon>LiveDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MPI_SRFIRO_DETAIL.cs">
+      <DependentUpon>LiveDatabase.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\PET_GROUP.cs">
       <DependentUpon>FishDB.tt</DependentUpon>
     </Compile>
@@ -283,6 +356,26 @@
       <DependentUpon>FishWithTank.edmx</DependentUpon>
       <LastGenOutput>FishWithTank1.cs</LastGenOutput>
     </Content>
+    <Content Include="Models\LiveDatabase.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LiveDatabase.edmx</DependentUpon>
+      <LastGenOutput>LiveDatabase.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\LiveDatabase.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LiveDatabase.edmx</DependentUpon>
+      <LastGenOutput>LiveDatabase.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Logins.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Logins.edmx</DependentUpon>
+      <LastGenOutput>Logins.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Logins.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Logins.edmx</DependentUpon>
+      <LastGenOutput>Logins.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -301,6 +394,20 @@
     </EntityDeploy>
     <Content Include="Models\FishDB.edmx.diagram">
       <DependentUpon>FishDB.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\Logins.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Logins.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Logins.edmx.diagram">
+      <DependentUpon>Logins.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\LiveDatabase.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>LiveDatabase.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\LiveDatabase.edmx.diagram">
+      <DependentUpon>LiveDatabase.edmx</DependentUpon>
     </Content>
     <None Include="Properties\PublishProfiles\FishInABox - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\fishinaboxweb - Web Deploy.pubxml" />
@@ -376,6 +483,41 @@
     <Content Include="Views\RECORD_PACKING\Details.cshtml" />
     <Content Include="Views\RECORD_PACKING\Edit.cshtml" />
     <Content Include="Views\RECORD_PACKING\Index.cshtml" />
+    <Content Include="Views\MARINE_CLASS\Create.cshtml" />
+    <Content Include="Views\MARINE_CLASS\Delete.cshtml" />
+    <Content Include="Views\MARINE_CLASS\Details.cshtml" />
+    <Content Include="Views\MARINE_CLASS\Edit.cshtml" />
+    <Content Include="Views\MARINE_CLASS\Index.cshtml" />
+    <Content Include="Views\MARINE_CLIMATE\Create.cshtml" />
+    <Content Include="Views\MARINE_CLIMATE\Delete.cshtml" />
+    <Content Include="Views\MARINE_CLIMATE\Details.cshtml" />
+    <Content Include="Views\MARINE_CLIMATE\Edit.cshtml" />
+    <Content Include="Views\MARINE_CLIMATE\Index.cshtml" />
+    <Content Include="Views\MARINE_FAMILY\Create.cshtml" />
+    <Content Include="Views\MARINE_FAMILY\Delete.cshtml" />
+    <Content Include="Views\MARINE_FAMILY\Details.cshtml" />
+    <Content Include="Views\MARINE_FAMILY\Edit.cshtml" />
+    <Content Include="Views\MARINE_FAMILY\Index.cshtml" />
+    <Content Include="Views\MARINE_SPECIES\Create.cshtml" />
+    <Content Include="Views\MARINE_SPECIES\Delete.cshtml" />
+    <Content Include="Views\MARINE_SPECIES\Details.cshtml" />
+    <Content Include="Views\MARINE_SPECIES\Edit.cshtml" />
+    <Content Include="Views\MARINE_SPECIES\Index.cshtml" />
+    <Content Include="Views\MARINE_TYPE\Create.cshtml" />
+    <Content Include="Views\MARINE_TYPE\Delete.cshtml" />
+    <Content Include="Views\MARINE_TYPE\Details.cshtml" />
+    <Content Include="Views\MARINE_TYPE\Edit.cshtml" />
+    <Content Include="Views\MARINE_TYPE\Index.cshtml" />
+    <Content Include="Views\MPI_SRFIRO\Create.cshtml" />
+    <Content Include="Views\MPI_SRFIRO\Delete.cshtml" />
+    <Content Include="Views\MPI_SRFIRO\Details.cshtml" />
+    <Content Include="Views\MPI_SRFIRO\Edit.cshtml" />
+    <Content Include="Views\MPI_SRFIRO\Index.cshtml" />
+    <Content Include="Views\MPI_SRFIRO_DETAIL\Create.cshtml" />
+    <Content Include="Views\MPI_SRFIRO_DETAIL\Delete.cshtml" />
+    <Content Include="Views\MPI_SRFIRO_DETAIL\Details.cshtml" />
+    <Content Include="Views\MPI_SRFIRO_DETAIL\Edit.cshtml" />
+    <Content Include="Views\MPI_SRFIRO_DETAIL\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
