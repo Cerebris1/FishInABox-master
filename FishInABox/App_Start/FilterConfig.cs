@@ -10,7 +10,7 @@ namespace FishInABox
             filters.Add(new HandleErrorAttribute());
 
             //Enable when going live
-            //filters.Add(new AuthorizeAttribute()); 
+            filters.Add(new AuthorizeAttribute());
         }
     }
 }
